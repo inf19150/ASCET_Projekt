@@ -1,207 +1,202 @@
 classType myCar.myCar
-blockdiagramSpecification Main {
+blockdiagramSpecification calc_spec {
 	methodBody calc {
 		outPin active {
-			connection_21
-		, connection_19
-		, connection_22, connection_24, connection_27
-		, connection_30
+			LConnection__Zy3jYK85EeyPTqKQfq_24g, LConnection__Zy3jYq85EeyPTqKQfq_24g, LConnection__Zy8b5a85EeyPTqKQfq_24g, LConnection__Zy9C8a85EeyPTqKQfq_24g, LConnection__Zy9qAa85EeyPTqKQfq_24g, LConnection__Zy9qA685EeyPTqKQfq_24g, LConnection__Zy_fM685EeyPTqKQfq_24g, LConnection__ZzAGQa85EeyPTqKQfq_24g
 		}
 	}
-	
-	simpleIdentifier resources.CarMessages.power at (61, 85) {
+	simpleIdentifier resources.CarMessages.driverPower at (11, 25) {
 		label at (0, -1)
 		outPin {
-			connection_3
+			LConnection__Zy28UK85EeyPTqKQfq_24g
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.brake at (61, 155) {
+	simpleIdentifier resources.CarMessages.power at (111, 25) {
+		label at (0, -1)
+		inPin LConnection__Zy28UK85EeyPTqKQfq_24g
+		outPin sequenceCall {
+			inPin LConnection__Zy3jYK85EeyPTqKQfq_24g
+		}
+	}
+	simpleIdentifier resources.CarMessages.driverBrake at (11, 85) {
 		label at (0, -1)
 		outPin {
-			connection_1
+			LConnection__Zy3jYa85EeyPTqKQfq_24g
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.v at  (611, 125) {
+	simpleIdentifier resources.CarMessages.brake at (111, 85) {
 		label at (0, -1)
-		inPin connection_20
-		sequenceCall {
-			inPin 
-		
-		connection_19
+		inPin LConnection__Zy3jYa85EeyPTqKQfq_24g
+		outPin sequenceCall {
+			inPin LConnection__Zy3jYq85EeyPTqKQfq_24g
 		}
 	}
-
-	
-	
-simpleIdentifier myCar.TimeBase.deltaT at (391, 235) {
+	simpleIdentifier resources.CarMessages.power at (11, 145) {
 		label at (0, -1)
 		inPin outPin {
-			connection_26
-		, connection_16
+			LConnection__Zy8b4K85EeyPTqKQfq_24g
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-
-	
-complexIdentifier    myVehicle at (151, 61) size (38, 14) backgroundColor #ffffff {
+	simpleIdentifier resources.CarMessages.brake at (11, 205) {
+		label at (0, -1)
+		inPin outPin {
+			LConnection__Zy8b4a85EeyPTqKQfq_24g
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier myCar.TimeBase.deltaT at (11, 265) {
+		label at (0, -1)
+		inPin outPin {
+			LConnection__Zy8b4q85EeyPTqKQfq_24g
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier g at (11, 325) {
+		label at (0, -1)
+		outPin {
+			LConnection__Zy8b4685EeyPTqKQfq_24g
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.steering at (11, 385) {
+		label at (0, -1)
+		outPin {
+			LConnection__Zy8b5K85EeyPTqKQfq_24g
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier myVehicle at (131, 141) size (38, 14) backgroundColor #ffffff {
 		label at (-10, 1)
 		methodCall myCar.myDrive_3.move {
-			argumentPin powerCtrl at (left, 2) connection_3
-			
-			
-			
-			
-		
-			
-			
-			
-		
-			
-			
-		
-			
-		
-			
-		argumentPin brakeCtrl at (left, 9) connection_1
-			
-			
-			
-		
-			
-			
-		
-			
-		
-			
-		argumentPin mydt at (bottom, 31) connection_16 {
-				bendpoints 
-			
-			(30, 0)
-			}
-			
-			
-		
-			
-		
-			
-		argumentPin myg at (bottom, 16) connection_11 {
-				bendpoints 
-			
-			
-			(40, 0)
-			}
-			
-		
-			
-		argumentPin delta at (top, 14) connection_18 {
-				bendpoints 
-			
-			(200, 0)
-			}
-			
-		sequenceCall at (-60, -36) {
-				inPin connection_21
+			argumentPin powerCtrl at (left, 0) LConnection__Zy8b4K85EeyPTqKQfq_24g
+			argumentPin brakeCtrl at (left, 1) LConnection__Zy8b4a85EeyPTqKQfq_24g
+			argumentPin mydt at (left, 2) LConnection__Zy8b4q85EeyPTqKQfq_24g
+			argumentPin myg at (left, 3) LConnection__Zy8b4685EeyPTqKQfq_24g
+			argumentPin delta at (left, 4) LConnection__Zy8b5K85EeyPTqKQfq_24g
+			sequenceCall at (0, 6) {
+				inPin LConnection__Zy8b5a85EeyPTqKQfq_24g
 			}
 		}
+	}
+	complexIdentifier myVehicle at (11, 441) size (38, 14) backgroundColor #ffffff {
+		label at (-10, 1)
 		elementCall (myCar.myDrive_3.v) {
-			returnPin at (right, 6) {
-				connection_20
+			returnPin at (right, 0) {
+				LConnection__Zy9C8K85EeyPTqKQfq_24g
 			}
-			sequenceCall {
+			sequenceCall at (0, 0) {
 				inPin
 			}
 		}
+	}
+	simpleIdentifier resources.CarMessages.v at (451, 445) {
+		label at (0, -1)
+		inPin LConnection__Zy9C8K85EeyPTqKQfq_24g
+		sequenceCall {
+			inPin LConnection__Zy9C8a85EeyPTqKQfq_24g
+		}
+	}
+	complexIdentifier myVehicle at (11, 661) size (38, 14) backgroundColor #ffffff {
+		label at (-10, 1)
 		elementCall (myCar.myDrive_3.x) {
 			returnPin at (right, 0) {
-				connection_23
+				LConnection__Zy9qAK85EeyPTqKQfq_24g
 			}
 			sequenceCall at (0, 0) {
 				inPin
 			}
 		}
+	}
+	simpleIdentifier resources.CarMessages.x at (451, 665) {
+		label at (0, -1)
+		inPin LConnection__Zy9qAK85EeyPTqKQfq_24g
+		sequenceCall {
+			inPin LConnection__Zy9qAa85EeyPTqKQfq_24g
+		}
+	}
+	complexIdentifier myVehicle at (11, 881) size (38, 14) backgroundColor #ffffff {
+		label at (-10, 1)
 		elementCall (myCar.myDrive_3.y) {
-			returnPin at (right, 3) {
-				connection_25
-			}
-			sequenceCall at (0, 0) {
-				inPin
-			}
-		}
-	elementCall (myCar.myDrive_3.bearing) {
-			returnPin at (top, 30) {
-				connection_31
+			returnPin at (right, 0) {
+				LConnection__Zy9qAq85EeyPTqKQfq_24g
 			}
 			sequenceCall at (0, 0) {
 				inPin
 			}
 		}
 	}
-	simpleIdentifier resources.CarMessages.x at (661, 65) {
+	simpleIdentifier resources.CarMessages.y at (451, 885) {
 		label at (0, -1)
-		inPin connection_23
+		inPin LConnection__Zy9qAq85EeyPTqKQfq_24g
 		sequenceCall {
-			inPin connection_22
+			inPin LConnection__Zy9qA685EeyPTqKQfq_24g
 		}
 	}
-	simpleIdentifier resources.CarMessages.y at (751, 95) {
+	simpleIdentifier myCar.TimeBase.deltaT at (11, 1105) {
 		label at (0, -1)
-		inPin connection_25
-		sequenceCall {
-			inPin connection_24
-		}
-	}
-	simpleIdentifier time at (651, 245) {
-		label at (0, -1)
-		inPin connection_28
-		outPin {
-			connection_29
-		}
-		sequenceCall {
-			inPin connection_27
-		}
-	}
-	addition at (541, 236) {
-		inPin connection_26
-		inPin connection_29 {
-			bendpoints (60, 0), (60, 50), (-190, 50), (-190, 10)
-		}
-		outPin {
-			connection_28
-		}
-	}
-	simpleIdentifier g at (241, 225) {
-		label at (0, -1)
-		outPin {
-			connection_11
+		inPin outPin {
+			LConnection__Zy_fMK85EeyPTqKQfq_24g
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-simpleIdentifier resources.CarMessages.steering at (61, 25) {
+	simpleIdentifier time at (11, 1145) {
 		label at (0, -1)
-		outPin {
-			connection_18
+		inPin outPin {
+			LConnection__Zy_fMa85EeyPTqKQfq_24g
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.bearing at (501, 25) {
-		label at (0, -1)
-		inPin connection_31 {
-			bendpoints (0, -20)
+	addition at (131, 1106) {
+		inPin LConnection__Zy_fMK85EeyPTqKQfq_24g
+		inPin LConnection__Zy_fMa85EeyPTqKQfq_24g
+		outPin {
+			LConnection__Zy_fMq85EeyPTqKQfq_24g
 		}
+	}
+	simpleIdentifier time at (231, 1105) {
+		label at (0, -1)
+		inPin LConnection__Zy_fMq85EeyPTqKQfq_24g
+		outPin sequenceCall {
+			inPin LConnection__Zy_fM685EeyPTqKQfq_24g
+		}
+	}
+	complexIdentifier myVehicle at (11, 1201) size (38, 14) backgroundColor #ffffff {
+		label at (-10, 1)
+		elementCall (myCar.myDrive_3.bearing) {
+			returnPin at (right, 0) {
+				LConnection__ZzAGQK85EeyPTqKQfq_24g
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.bearing at (451, 1205) {
+		label at (0, -1)
+		inPin LConnection__ZzAGQK85EeyPTqKQfq_24g
 		sequenceCall {
-			inPin connection_30
+			inPin LConnection__ZzAGQa85EeyPTqKQfq_24g
 		}
 	}
 }
