@@ -1,0 +1,156 @@
+classType environment.FlashLight
+blockdiagramSpecification calc_spec {
+	methodBody calc {
+		outPin active {
+			LConnection__mReOx69dEeyifM2xQqRr3w
+		}
+	}
+	methodArgumentIdentifier calc.proximity1 at (51, 85) {
+		label at (0, -1)
+		outPin {
+			connection_51
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	between at (291, 186) {
+		inPin connection_52
+		inPin connection_57
+		inPin connection_58 {
+			bendpoints (80, 0), (80, -20)
+		}
+		outPin {
+			connection_18
+		}
+	}
+	methodArgumentIdentifier calc.proximity2 at (51, 185) {
+		label at (0, -1)
+		outPin {
+			connection_52
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	between at (291, 86) {
+		inPin connection_51
+		inPin connection_54
+		inPin connection_59 {
+			bendpoints (80, 0), (80, -20)
+		}
+		outPin {
+			connection_32
+		}
+	}
+	methodArgumentIdentifier calc.proximity3 at (51, 285) {
+		label at (0, -1)
+		outPin {
+			connection_53
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	between at (291, 286) {
+		inPin connection_53
+		inPin connection_56
+		inPin connection_60 {
+			bendpoints (80, 0), (80, -20)
+		}
+		outPin {
+			connection_33
+		}
+	}
+	or at (491, 176) size (2, 5) {
+		inPin connection_32 {
+			bendpoints (120, 0), (120, 80)
+		}
+		inPin connection_18
+		inPin connection_33 {
+			bendpoints (120, 0), (120, -80)
+		}
+		outPin {
+			connection_62
+		}
+	}
+	return at (671, 185) {
+		label at (0, 0)
+		inPin connection_63
+		sequenceCall {
+			inPin LConnection__mReOx69dEeyifM2xQqRr3w
+		}
+	}
+	simpleIdentifier upperLimit at (161, 125) {
+		label at (0, -1)
+		outPin {
+			connection_59
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier lowerLimit at (161, 95) {
+		label at (0, -1)
+		outPin {
+			connection_54
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier lowerLimit at (161, 195) {
+		label at (0, -1)
+		outPin {
+			connection_57
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier lowerLimit at (161, 295) {
+		label at (0, -1)
+		outPin {
+			connection_56
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier upperLimit at (161, 225) {
+		label at (0, -1)
+		outPin {
+			connection_58
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier upperLimit at (161, 325) {
+		label at (0, -1)
+		outPin {
+			connection_60
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	and at (601, 176) {
+		inPin connection_64 {
+			bendpoints (50, 0), (50, 30)
+		}
+		inPin connection_62
+		outPin {
+			connection_63
+		}
+	}
+	methodArgumentIdentifier calc.isRed at (501, 145) {
+		label at (-20, -31)
+		outPin {
+			connection_64
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

@@ -2,10 +2,10 @@ package driver;
 import resources.CarMessages;
 
 static class driver
-writes CarMessages.driverPower, CarMessages.driverBrake {
+writes CarMessages.power, CarMessages.brake {
 	@thread
 	public void calc() {
-		CarMessages.driverPower = 20.0;
-		CarMessages.driverBrake = 0.0;
+		CarMessages.power = 20.0;
+		CarMessages.brake = 0.0;
 	}
 }

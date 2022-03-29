@@ -1,0 +1,134 @@
+classType environment.Light
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_2, connection_5, connection_6, connection_10, connection_21, connection_23, connection_25
+		}
+	}
+	simpleIdentifier myCar.TimeBase.deltaT at (51, 105) {
+		label at (0, -1)
+		inPin outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (161, 106) {
+		inPin connection_1
+		inPin connection_4 {
+			bendpoints (50, 0), (50, 40), (-190, 40)
+		}
+		outPin {
+			connection_3
+		}
+	}
+	simpleIdentifier elapsedTime at (301, 115) {
+		label at (0, -1)
+		inPin connection_3
+		outPin {
+			connection_7, connection_9, connection_4
+		}
+		sequenceCall {
+			inPin connection_2
+		}
+	}
+	complexIdentifier TrafficLightSM_instance at (531, 91) size (14, 8) {
+		label at (-30, 1)
+		methodCall environment.LightSM.trafficLightSMStatemachineTrigger {
+			methodVoidPin at (top, 0) sequenceCall at (-14, -36) {
+				inPin connection_5
+			}
+		}
+		elementCall (environment.LightSM.elapsedTime) {
+			argumentPin at (left, 2) connection_7
+			sequenceCall at (-70, -44) {
+				inPin connection_6
+			}
+		}
+		elementCall (environment.LightSM.red) {
+			returnPin at (right, 0) {
+				connection_22
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (environment.LightSM.yellow) {
+			returnPin at (right, 3) {
+				connection_24
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (environment.LightSM.green) {
+			returnPin at (right, 6) {
+				connection_26
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	greaterOrEqual at (241, 216) {
+		inPin connection_9 {
+			bendpoints (50, 0), (50, 40), (-110, 40)
+		}
+		inPin connection_14
+		outPin {
+			connection_11
+		}
+	}
+	if at (301, 221) {
+		inPin connection_11
+		ifControlFlowOutPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin connection_10
+		}
+	}
+	simpleIdentifier elapsedTime at (411, 245) {
+		label at (0, -1)
+		inPin connection_13
+		outPin sequenceCall {
+			inPin connection_12
+		}
+	}
+	literal unit resources.s "0.0" at (361, 243) size (49, 0) {
+		outPin {
+			connection_13
+		}
+	}
+	literal unit resources.s "60.0" at (151, 233) size (49, 0) {
+		outPin {
+			connection_14
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.red at (721, 65) {
+		label at (0, -1)
+		inPin connection_22 {
+			bendpoints (40, 0)
+		}
+		sequenceCall at (0, -24) {
+			inPin connection_21
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.yellow at (721, 125) {
+		label at (0, -1)
+		inPin connection_24
+		sequenceCall at (0, -24) {
+			inPin connection_23
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.green at (721, 185) {
+		label at (0, -1)
+		inPin connection_26 {
+			bendpoints (40, 0)
+		}
+		sequenceCall at (0, -24) {
+			inPin connection_25
+		}
+	}
+}

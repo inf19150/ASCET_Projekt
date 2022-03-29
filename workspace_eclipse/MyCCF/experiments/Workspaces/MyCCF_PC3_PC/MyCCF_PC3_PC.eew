@@ -12,9 +12,11 @@
       </Documents>
     </Item>
   </PluginData>
-  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType" />
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID33aabd90-ed0a-44ca-9058-c64c9e59c89f" path="C:\Users\harte\Dokumente\git\ASCET_Projekt\workspace_eclipse\MyCCF\experiments\Experiments\system\MyCCF_PC3_PC\MyCCF_PC3_PC.eex" hintPath="..\..\Experiments\system\MyCCF_PC3_PC\MyCCF_PC3_PC.eex" />
+  </RecentExperiments>
   <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
-    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID51f61626-ca50-4818-8134-fd2cad4e3e56" Created="2022-03-29T08:23:51.822Z" LastOpened="2022-03-29T08:23:51.822Z" LastSaved="2022-03-29T08:23:52.576Z" />
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID51f61626-ca50-4818-8134-fd2cad4e3e56" Created="2022-03-29T08:23:51.822Z" LastOpened="2022-03-29T13:29:50.142Z" LastSaved="2022-03-29T13:28:01.948Z" />
     <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="ID8100b081-2281-44d4-abb4-44b197bc2daa" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
   </WorkspaceInfo>
 </Workspace>

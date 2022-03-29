@@ -1,0 +1,267 @@
+classType environment.TrafficLightController
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin {
+			connection_32, connection_30, connection_28, connection_38, connection_36, connection_34, connection_44, connection_42, connection_40, connection_50, connection_54, connection_56, connection_52, connection_65
+		}
+	}
+	methodBody init {
+		outPin active {
+			connection_2, connection_4, connection_6
+		}
+	}
+	complexIdentifier TrafficLight_instance at (521, 51) size (14, 13) {
+		label at (150, -69)
+		methodCall environment.TrafficLight.setPosition {
+			argumentPin position at (left, 0) connection_3
+			sequenceCall at (-40, -34) {
+				inPin connection_2
+			}
+		}
+		methodCall environment.TrafficLight.setRed {
+			argumentPin red at (left, 2) connection_33 {
+				bendpoints (250, 0), (250, 40)
+			}
+			sequenceCall at (-60, -24) {
+				inPin connection_32
+			}
+		}
+		methodCall environment.TrafficLight.setYellow {
+			argumentPin yellow at (left, 5) connection_39 {
+				bendpoints (170, 0), (170, 20)
+			}
+			sequenceCall at (-70, -24) {
+				inPin connection_38
+			}
+		}
+		methodCall environment.TrafficLight.setGreen {
+			argumentPin green at (left, 8) connection_45
+			sequenceCall at (-70, -24) {
+				inPin connection_44
+			}
+		}
+		methodCall environment.TrafficLight.getProximity {
+			returnPin at (right, 0) {
+				connection_64
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall environment.TrafficLight.updateProximity {
+			argumentPin carElapsed at (bottom, 5) connection_53 {
+				bendpoints (40, 0)
+			}
+			sequenceCall at (6, 11) {
+				inPin connection_52
+			}
+		}
+	}
+	complexIdentifier TrafficLight_instance_2 at (511, 401) size (14, 13) {
+		label at (160, -69)
+		methodCall environment.TrafficLight.setPosition {
+			argumentPin position at (left, 0) connection_5
+			sequenceCall at (-50, -34) {
+				inPin connection_4
+			}
+		}
+		methodCall environment.TrafficLight.setRed {
+			argumentPin red at (left, 2) connection_31 {
+				bendpoints (250, 0), (250, 390)
+			}
+			sequenceCall at (-60, -24) {
+				inPin connection_30
+			}
+		}
+		methodCall environment.TrafficLight.setYellow {
+			argumentPin yellow at (left, 5) connection_37 {
+				bendpoints (170, 0), (170, 370)
+			}
+			sequenceCall at (-70, -24) {
+				inPin connection_36
+			}
+		}
+		methodCall environment.TrafficLight.setGreen {
+			argumentPin green at (left, 8) connection_43 {
+				bendpoints (90, 0), (90, 350)
+			}
+			sequenceCall at (-70, -24) {
+				inPin connection_42
+			}
+		}
+		methodCall environment.TrafficLight.getProximity {
+			returnPin at (right, 0) {
+				connection_63
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall environment.TrafficLight.updateProximity {
+			argumentPin carElapsed at (bottom, 4) connection_55 {
+				bendpoints (40, 0)
+			}
+			sequenceCall at (6, 11) {
+				inPin connection_54
+			}
+		}
+	}
+	complexIdentifier TrafficLight_instance_3 at (511, 681) size (14, 13) {
+		label at (150, -69)
+		methodCall environment.TrafficLight.setPosition {
+			argumentPin position at (left, 0) connection_7
+			sequenceCall at (-60, -44) {
+				inPin connection_6
+			}
+		}
+		methodCall environment.TrafficLight.setRed {
+			argumentPin red at (left, 2) connection_29 {
+				bendpoints (250, 0), (250, 670)
+			}
+			sequenceCall at (-50, -24) {
+				inPin connection_28
+			}
+		}
+		methodCall environment.TrafficLight.setYellow {
+			argumentPin yellow at (left, 5) connection_35 {
+				bendpoints (170, 0), (170, 650)
+			}
+			sequenceCall at (-70, -24) {
+				inPin connection_34
+			}
+		}
+		methodCall environment.TrafficLight.setGreen {
+			argumentPin green at (left, 8) connection_41 {
+				bendpoints (90, 0), (90, 630)
+			}
+			sequenceCall at (-70, -24) {
+				inPin connection_40
+			}
+		}
+		methodCall environment.TrafficLight.getProximity {
+			returnPin at (right, 0) {
+				connection_62
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall environment.TrafficLight.updateProximity {
+			argumentPin carElapsed at (bottom, 4) connection_57 {
+				bendpoints (40, 0)
+			}
+			sequenceCall at (16, 11) {
+				inPin connection_56
+			}
+		}
+	}
+	literal unit resources.m "300.0" at (371, 53) size (49, 0) {
+		outPin {
+			connection_3
+		}
+	}
+	literal unit resources.m "900.0" at (361, 683) size (49, 0) {
+		outPin {
+			connection_7
+		}
+	}
+	literal unit resources.m "500.0" at (371, 403) size (49, 0) {
+		outPin {
+			connection_5
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.red at (11, 35) {
+		label at (0, -1)
+		outPin {
+			connection_31, connection_33, connection_67, connection_29
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.yellow at (61, 85) {
+		label at (0, -1)
+		outPin {
+			connection_37, connection_39, connection_35
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.green at (111, 135) {
+		label at (0, -1)
+		outPin {
+			connection_43, connection_45, connection_41
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.x at (21, 205) {
+		label at (0, -1)
+		outPin {
+			connection_51
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier carElapsed at (61, 205) {
+		label at (0, -1)
+		inPin connection_51
+		outPin sequenceCall {
+			inPin connection_50
+		}
+	}
+	simpleIdentifier carElapsed at (491, 215) {
+		label at (0, -1)
+		inPin outPin {
+			connection_53
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier carElapsed at (471, 555) {
+		label at (0, -1)
+		inPin outPin {
+			connection_55
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier carElapsed at (471, 835) {
+		label at (0, -1)
+		inPin outPin {
+			connection_57
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier environment.FlashLight at (1061, 51) size (17, 76) {
+		label at (0, 1)
+		methodCall environment.FlashLight.calc {
+			argumentPin proximity1 at (left, 0) connection_64
+			argumentPin proximity2 at (left, 35) connection_63
+			argumentPin proximity3 at (left, 63) connection_62
+			argumentPin isRed at (top, 8) connection_67 {
+				bendpoints (250, 0), (250, -30), (1100, -30)
+			}
+			returnPin at (right, 31) {
+				connection_66
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.flashed at (1281, 365) {
+		label at (0, -1)
+		inPin connection_66
+		sequenceCall {
+			inPin connection_65
+		}
+	}
+}

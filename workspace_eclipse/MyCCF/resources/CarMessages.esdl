@@ -5,8 +5,6 @@ data interface CarMessages {
 	velocity v = 0.0 [kmh];
 	real power = 0.0;
 	real brake = 0.0;
-	real driverPower = 0.0;
-	real driverBrake = 0.0;
 	real steering = 0.0;
 	real bearing = 0.0;
 	@a2l_unit_label("m")

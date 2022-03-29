@@ -5,8 +5,8 @@ import resources.a;
 import resources.kmh;
 
 static class myCar
-reads CarMessages.power, CarMessages.brake, CarMessages.steering, CarMessages.driverPower, CarMessages.driverBrake
-writes CarMessages.power, CarMessages.brake, CarMessages.v, CarMessages.x, CarMessages.y, CarMessages.bearing {
+reads CarMessages.power, CarMessages.brake, CarMessages.steering
+writes CarMessages.v, CarMessages.x, CarMessages.y, CarMessages.bearing {
 	myDrive_3 myVehicle;
 	kmh v = 0.0[kmh];
 	s time = 0.0[s];
@@ -14,15 +14,13 @@ writes CarMessages.power, CarMessages.brake, CarMessages.v, CarMessages.x, CarMe
 	characteristic real ^delta = 0.0;
 
 	@thread
-	@generated("blockdiagram", "6c7ad187")
+	@generated("blockdiagram", "a98e156c")
 	public void calc() {
-		CarMessages.power = CarMessages.driverPower; // calc_spec/calc 1
-		CarMessages.brake = CarMessages.driverBrake; // calc_spec/calc 2
-		myVehicle.move(CarMessages.power, CarMessages.brake, TimeBase.deltaT, g, CarMessages.steering); // calc_spec/calc 3
-		CarMessages.v = myVehicle.v; // calc_spec/calc 4
-		CarMessages.x = myVehicle.x; // calc_spec/calc 5
-		CarMessages.y = myVehicle.y; // calc_spec/calc 6
-		time = (TimeBase.deltaT + time); // calc_spec/calc 7
-		CarMessages.bearing = myVehicle.bearing; // calc_spec/calc 8
+		myVehicle.move(CarMessages.power, CarMessages.brake, TimeBase.deltaT, g, CarMessages.steering); // Main/calc 1
+		CarMessages.v = myVehicle.v; // Main/calc 2
+		CarMessages.x = myVehicle.x; // Main/calc 3
+		CarMessages.y = myVehicle.y; // Main/calc 4
+		time = (TimeBase.deltaT + time); // Main/calc 5
+		CarMessages.bearing = myVehicle.bearing; // Main/calc 6
 	}
 }
