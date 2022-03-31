@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 746605802
+		         /* programm id */ 746612430
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -471,7 +471,7 @@
 			/* upper limit        */ 200.0
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -485,7 +485,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -513,7 +513,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -531,6 +531,20 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
+		/begin MEASUREMENT resources.CarMessages.dist
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident_m
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 2
+			/end IF_DATA
+		/end MEASUREMENT
+
 		/begin MEASUREMENT resources.CarMessages.x
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
@@ -541,7 +555,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -555,7 +569,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 7
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -1085,7 +1099,7 @@
 				/* axis type          */ STD_AXIS
 				/* input quantity     */ NO_INPUT_QUANTITY
 				/* conversion         */ esdl_ident
-				/* max axis point     */ 6
+				/* max axis point     */ 5
 				/* lower limit        */ -3.4028234663852886E+38
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
@@ -1185,6 +1199,7 @@
 			/end IN_MEASUREMENT
 			/begin OUT_MEASUREMENT
 				resources.CarMessages.bearing
+				resources.CarMessages.dist
 				resources.CarMessages.v
 				resources.CarMessages.x
 				resources.CarMessages.y
@@ -1243,7 +1258,7 @@
 		/begin FUNCTION environment.TrafficLightController
 			""
 			/begin IN_MEASUREMENT
-				resources.CarMessages.x
+				resources.CarMessages.dist
 				resources.TrafficLightMessages.green
 				resources.TrafficLightMessages.red
 				resources.TrafficLightMessages.yellow
@@ -1331,7 +1346,6 @@
 			/begin OUT_MEASUREMENT
 				resources.CarMessages.brake
 				resources.CarMessages.power
-				resources.CarMessages.x
 			/end OUT_MEASUREMENT
 			/begin LOC_MEASUREMENT
 				driver.driver.requiredBrakeMomentum
@@ -1538,6 +1552,7 @@
 			/begin REF_MEASUREMENT
 				resources.CarMessages.bearing
 				resources.CarMessages.brake
+				resources.CarMessages.dist
 				resources.CarMessages.power
 				resources.CarMessages.steering
 				resources.CarMessages.v

@@ -8,6 +8,8 @@ data interface CarMessages {
 	real steering = 0.0;
 	real bearing = 0.0;
 	@a2l_unit_label("m")
+	m dist = 0.0 [m];
+	@a2l_unit_label("m")
 	m x = 0.0 [m];
 	@a2l_unit_label("m")
 	m y = 0.0 [m];

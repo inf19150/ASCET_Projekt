@@ -2,37 +2,37 @@ package environment;
 import resources.m;
 
 class TrafficLight {
-	boolean red;
-	boolean yellow;
-	boolean green;
-	boolean isVisible;
-	m proximity;
-	m position;
+	boolean red = false;
+	boolean yellow = false;
+	boolean green = false;
+	boolean isVisible = false;
+	m proximity = 0.0[m];
+	m position = 0.0[m];
 
-	public initializer initLight() {
-		red = false;
-		yellow = true;
-		green = false;
-		isVisible = false;
-		position = 0.0[m];
-		proximity = 0.0[m];
+	//public initializer initLight() {
+	//	red = false;
+	//	yellow = true;
+	//	green = false;
+	//	isVisible = false;
+	//	position = 0.0[m];
+	//	proximity = 0.0[m];
+	//}
+
+	public void setPosition(m pos) {
+		this.position = pos;
+		this.proximity = pos;
 	}
 
-	public void setPosition(m position) {
-		this.position = position;
-		this.proximity = position;
+	public void setRed(boolean r) {
+		this.red = r;
 	}
 
-	public void setRed(boolean red) {
-		this.red = red;
+	public void setYellow(boolean y) {
+		this.yellow = y;
 	}
 
-	public void setYellow(boolean yellow) {
-		this.yellow = yellow;
-	}
-
-	public void setGreen(boolean green) {
-		this.green = green;
+	public void setGreen(boolean g) {
+		this.green = g;
 	}
 	
 	@no_side_effect

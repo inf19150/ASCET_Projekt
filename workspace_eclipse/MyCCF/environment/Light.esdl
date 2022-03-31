@@ -5,7 +5,7 @@ import resources.TrafficLightMessages;
 
 static class Light
 writes TrafficLightMessages.red, TrafficLightMessages.yellow, TrafficLightMessages.green {
-	s elapsedTime;
+	s elapsedTime = 0.0[s];
 	LightSM TrafficLightSM_instance;
 
 	@thread

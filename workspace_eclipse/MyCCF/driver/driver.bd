@@ -205,12 +205,12 @@ blockdiagramSpecification calc_spec {
 			inPin
 		}
 	}
-	literal unit resources.m "5.0" at (61, 563) size (49, 0) {
+	literal unit resources.m "8.0" at (61, 563) size (49, 0) {
 		outPin {
 			connection_57
 		}
 	}
-	subtraction at (181, 546) {
+	addition at (181, 546) {
 		inPin connection_56
 		inPin connection_57
 		outPin {
