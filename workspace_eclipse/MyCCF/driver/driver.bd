@@ -1,0 +1,335 @@
+classType driver.driver
+blockdiagramSpecification calc_spec {
+	comment at (0, 20) {
+		""
+	}
+	methodBody calc {
+		outPin active {
+			connection_48, connection_50, connection_47, connection_84, connection_76, connection_41
+		}
+	}
+	literal Numeric "0.0" at (951, 133) size (49, 0) {
+		outPin {
+			LConnection__kNXSwLDuEeyGAcmS010UAd1w
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at (1061, 135) {
+		label at (0, -1)
+		inPin LConnection__kNXSwLDuEeyGAcmS010UAd1w
+		sequenceCall at (0, -14) {
+			inPin LConnection__kNXSwbDuEeyGAcmS010UAd1w {
+				bendpoints (169, 0)
+			}
+		}
+	}
+	literal Numeric "70.0" at (951, 173) size (49, 0) {
+		outPin {
+			LConnection__kNXSwrDuEeyGAcmS010UAd1w
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (1061, 175) {
+		label at (0, -1)
+		inPin LConnection__kNXSwrDuEeyGAcmS010UAd1w
+		sequenceCall at (0, -14) {
+			inPin LConnection__kNXSw7DuEeyGAcmS010UAd1w {
+				bendpoints (0, 40), (150, 40), (150, 50)
+			}
+		}
+	}
+	ifElse at (841, 111) {
+		inPin connection_6 {
+			bendpoints (0, -30)
+		}
+		ifControlFlowOutPin {
+			LConnection__kNXSwbDuEeyGAcmS010UAd1w, LConnection__kNXSw7DuEeyGAcmS010UAd1w
+		}
+		elseControlFlowOutPin {
+			connection_7, connection_9
+		}
+		sequenceCall at (0, -20) {
+			inPin connection_3
+		}
+	}
+	greaterOrEqual at (781, 136) {
+		inPin connection_13
+		inPin connection_12
+		outPin {
+			connection_6
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (661, 135) {
+		label at (-10, -31)
+		outPin {
+			connection_13
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Numeric "100.0" at (951, 213) size (49, 0) {
+		outPin {
+			connection_8
+		}
+	}
+	literal Numeric "0.0" at (951, 253) size (49, 0) {
+		outPin {
+			connection_10
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at (1061, 215) {
+		label at (0, -1)
+		inPin connection_8
+		sequenceCall at (0, -14) {
+			inPin connection_7 {
+				bendpoints (0, 60)
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (1061, 255) {
+		label at (0, -1)
+		inPin connection_10
+		sequenceCall at (0, -14) {
+			inPin connection_9 {
+				bendpoints (0, 90), (190, 90), (190, 100)
+			}
+		}
+	}
+	simpleIdentifier targetVelocity at (661, 155) {
+		label at (-10, -1)
+		outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.visibleProximity at (41, 75) {
+		label at (-10, -1)
+		outPin {
+			connection_49
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.green at (41, 115) {
+		label at (0, -1)
+		outPin {
+			connection_51
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (451, 91) {
+		inPin connection_53 {
+			bendpoints (30, 0), (30, 20)
+		}
+		ifControlFlowOutPin {
+			connection_3
+		}
+		elseControlFlowOutPin {
+			connection_45, connection_82
+		}
+		sequenceCall {
+			inPin connection_41
+		}
+	}
+	literal Numeric "0.0" at (531, 303) size (49, 0) {
+		outPin {
+			connection_46
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at (641, 305) {
+		label at (0, -1)
+		inPin connection_46
+		sequenceCall at (0, -14) {
+			inPin connection_45 {
+				bendpoints (0, 160), (160, 160), (160, 170)
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (641, 345) {
+		label at (0, -1)
+		inPin connection_83
+		sequenceCall at (0, -14) {
+			inPin connection_82 {
+				bendpoints (0, 200), (150, 200), (150, 210)
+			}
+		}
+	}
+	complexIdentifier DrivingSM_instance at (201, 71) size (14, 8) {
+		label at (0, 1)
+		methodCall driver.DrivingSM.drivingSMStatemachineTrigger {
+			methodVoidPin at (top, 0) sequenceCall at (-4, -30) {
+				inPin connection_47
+			}
+		}
+		elementCall (driver.DrivingSM.proximity) {
+			argumentPin at (left, 0) connection_49
+			sequenceCall at (-50, -34) {
+				inPin connection_48
+			}
+		}
+		elementCall (driver.DrivingSM.green) {
+			argumentPin at (left, 4) connection_51
+			sequenceCall at (-40, 6) {
+				inPin connection_50
+			}
+		}
+		elementCall (driver.DrivingSM.cruising) {
+			returnPin at (right, 0) {
+				connection_85, connection_53
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier InverseBrakeMomentum at (521, 541) {
+		label at (-50, 1)
+		inPin connection_71
+		outPin {
+			connection_75
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.visibleProximity at (71, 545) {
+		label at (-30, -31)
+		outPin {
+			connection_56
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal unit resources.m "5.0" at (61, 563) size (49, 0) {
+		outPin {
+			connection_57
+		}
+	}
+	subtraction at (181, 546) {
+		inPin connection_56
+		inPin connection_57
+		outPin {
+			connection_58
+		}
+	}
+	multiplication at (271, 556) {
+		inPin connection_58
+		inPin connection_59 {
+			bendpoints (30, 0), (30, -20)
+		}
+		outPin {
+			connection_61
+		}
+	}
+	literal Numeric "-2.0" at (181, 593) size (49, 0) {
+		outPin {
+			connection_59
+		}
+	}
+	division at (381, 546) {
+		inPin connection_68 {
+			bendpoints (20, 0), (20, 60)
+		}
+		inPin connection_61
+		outPin {
+			connection_71
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (31, 485) {
+		label at (0, -31)
+		outPin {
+			connection_62
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	division at (131, 486) {
+		inPin connection_62
+		inPin connection_63
+		outPin {
+			connection_65
+		}
+	}
+	literal unit resources.kmh "3.6" at (31, 503) size (49, 0) {
+		outPin {
+			connection_63
+		}
+	}
+	multiplication at (251, 476) {
+		inPin connection_70
+		inPin connection_65
+		outPin {
+			connection_67, connection_66
+		}
+	}
+	multiplication at (311, 476) {
+		inPin connection_66 {
+			bendpoints (20, 0)
+		}
+		inPin connection_67 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_68
+		}
+	}
+	literal unit resources.ms "1.0" at (181, 473) size (49, 0) {
+		outPin {
+			connection_70
+		}
+	}
+	simpleIdentifier requiredBrakeMomentum at (651, 555) {
+		label at (0, -1)
+		inPin connection_75
+		outPin sequenceCall {
+			inPin connection_74 {
+				bendpoints (50, 0), (50, 40)
+			}
+		}
+	}
+	if at (531, 491) {
+		inPin connection_79 {
+			bendpoints (90, 0)
+		}
+		ifControlFlowOutPin {
+			connection_74
+		}
+		sequenceCall {
+			inPin connection_76
+		}
+	}
+	complexIdentifier EdgeFalling_instance at (401, 401) size (3, 3) backgroundColor #ffffff {
+		label at (-60, 1)
+		methodCall SystemLib.Miscellaneous.EdgeFalling.compute {
+			argumentPin signal at (left, 1) connection_85 {
+				bendpoints (30, 0), (30, 340)
+			}
+			sequenceCall at (-70, -30) {
+				inPin connection_84
+			}
+		}
+		methodCall SystemLib.Miscellaneous.EdgeFalling.value {
+			returnPin at (right, 1) {
+				connection_79
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier requiredBrakeMomentum at (521, 345) {
+		label at (-50, -1)
+		inPin outPin {
+			connection_83
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

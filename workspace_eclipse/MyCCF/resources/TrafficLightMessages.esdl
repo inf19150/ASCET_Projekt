@@ -5,5 +5,5 @@ data interface TrafficLightMessages {
 	boolean yellow = false;
 	boolean green = false;
 	boolean flashed = false;
-	
+	m visibleProximity = 0.0[m];
 }

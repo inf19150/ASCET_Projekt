@@ -2,7 +2,7 @@ classType environment.TrafficLightController
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin {
-			connection_32, connection_30, connection_28, connection_38, connection_36, connection_34, connection_44, connection_42, connection_40, connection_50, connection_54, connection_56, connection_52, connection_65
+			connection_32, connection_30, connection_28, connection_38, connection_36, connection_34, connection_44, connection_42, connection_40, connection_86, connection_88, connection_90, connection_137, connection_72, connection_68, connection_82, connection_65
 		}
 	}
 	methodBody init {
@@ -11,7 +11,7 @@ blockdiagramSpecification Main {
 		}
 	}
 	complexIdentifier TrafficLight_instance at (521, 51) size (14, 13) {
-		label at (150, -69)
+		label at (50, -159)
 		methodCall environment.TrafficLight.setPosition {
 			argumentPin position at (left, 0) connection_3
 			sequenceCall at (-40, -34) {
@@ -42,23 +42,31 @@ blockdiagramSpecification Main {
 		}
 		methodCall environment.TrafficLight.getProximity {
 			returnPin at (right, 0) {
-				connection_64
+				connection_75, connection_64
 			}
 			sequenceCall {
 				inPin
 			}
 		}
 		methodCall environment.TrafficLight.updateProximity {
-			argumentPin carElapsed at (bottom, 5) connection_53 {
-				bendpoints (40, 0)
+			argumentPin carElapsed at (bottom, 5) connection_87 {
+				bendpoints (30, 0)
 			}
 			sequenceCall at (6, 11) {
-				inPin connection_52
+				inPin connection_86
+			}
+		}
+		methodCall environment.TrafficLight.getVisible {
+			returnPin at (right, 7) {
+				connection_73
+			}
+			sequenceCall at (0, 0) {
+				inPin
 			}
 		}
 	}
 	complexIdentifier TrafficLight_instance_2 at (511, 401) size (14, 13) {
-		label at (160, -69)
+		label at (30, -159)
 		methodCall environment.TrafficLight.setPosition {
 			argumentPin position at (left, 0) connection_5
 			sequenceCall at (-50, -34) {
@@ -91,23 +99,31 @@ blockdiagramSpecification Main {
 		}
 		methodCall environment.TrafficLight.getProximity {
 			returnPin at (right, 0) {
-				connection_63
+				connection_81, connection_63
 			}
 			sequenceCall {
 				inPin
 			}
 		}
 		methodCall environment.TrafficLight.updateProximity {
-			argumentPin carElapsed at (bottom, 4) connection_55 {
-				bendpoints (40, 0)
+			argumentPin carElapsed at (bottom, 4) connection_89 {
+				bendpoints (20, 0)
 			}
 			sequenceCall at (6, 11) {
-				inPin connection_54
+				inPin connection_88
+			}
+		}
+		methodCall environment.TrafficLight.getVisible {
+			returnPin at (right, 7) {
+				connection_69
+			}
+			sequenceCall at (0, 0) {
+				inPin
 			}
 		}
 	}
 	complexIdentifier TrafficLight_instance_3 at (511, 681) size (14, 13) {
-		label at (150, -69)
+		label at (30, -159)
 		methodCall environment.TrafficLight.setPosition {
 			argumentPin position at (left, 0) connection_7
 			sequenceCall at (-60, -44) {
@@ -140,18 +156,26 @@ blockdiagramSpecification Main {
 		}
 		methodCall environment.TrafficLight.getProximity {
 			returnPin at (right, 0) {
-				connection_62
+				connection_85, connection_62
 			}
 			sequenceCall {
 				inPin
 			}
 		}
 		methodCall environment.TrafficLight.updateProximity {
-			argumentPin carElapsed at (bottom, 4) connection_57 {
-				bendpoints (40, 0)
+			argumentPin carElapsed at (bottom, 4) connection_91 {
+				bendpoints (20, 0)
 			}
 			sequenceCall at (16, 11) {
-				inPin connection_56
+				inPin connection_90
+			}
+		}
+		methodCall environment.TrafficLight.getVisible {
+			returnPin at (right, 7) {
+				connection_83
+			}
+			sequenceCall at (0, 0) {
+				inPin
 			}
 		}
 	}
@@ -197,44 +221,10 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.x at (21, 205) {
+	simpleIdentifier resources.CarMessages.x at (511, 205) {
 		label at (0, -1)
 		outPin {
-			connection_51
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier carElapsed at (61, 205) {
-		label at (0, -1)
-		inPin connection_51
-		outPin sequenceCall {
-			inPin connection_50
-		}
-	}
-	simpleIdentifier carElapsed at (491, 215) {
-		label at (0, -1)
-		inPin outPin {
-			connection_53
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier carElapsed at (471, 555) {
-		label at (0, -1)
-		inPin outPin {
-			connection_55
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier carElapsed at (471, 835) {
-		label at (0, -1)
-		inPin outPin {
-			connection_57
+			connection_87
 		}
 		sequenceCall {
 			inPin
@@ -262,6 +252,90 @@ blockdiagramSpecification Main {
 		inPin connection_66
 		sequenceCall {
 			inPin connection_65
+		}
+	}
+	if at (731, 471) {
+		inPin connection_69
+		ifControlFlowOutPin {
+			connection_80
+		}
+		sequenceCall {
+			inPin connection_68
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.visibleProximity at (821, 455) {
+		label at (10, -11)
+		inPin connection_81 {
+			bendpoints (140, 0), (140, 50)
+		}
+		sequenceCall at (-10, 16) {
+			inPin connection_80
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.visibleProximity at (811, 105) {
+		label at (10, -11)
+		inPin connection_75 {
+			bendpoints (120, 0), (120, 50)
+		}
+		sequenceCall at (-10, 16) {
+			inPin connection_74
+		}
+	}
+	if at (711, 121) {
+		inPin connection_73
+		ifControlFlowOutPin {
+			connection_74
+		}
+		sequenceCall {
+			inPin connection_72
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.visibleProximity at (821, 735) {
+		label at (10, -11)
+		inPin connection_85 {
+			bendpoints (140, 0), (140, 50)
+		}
+		sequenceCall at (-10, 16) {
+			inPin connection_84
+		}
+	}
+	if at (731, 751) {
+		inPin connection_83
+		ifControlFlowOutPin {
+			connection_84
+		}
+		sequenceCall {
+			inPin connection_82
+		}
+	}
+	simpleIdentifier resources.CarMessages.x at (501, 555) {
+		label at (0, -1)
+		outPin {
+			connection_89
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.x at (501, 835) {
+		label at (0, -1)
+		outPin {
+			connection_91
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.visibleProximity at (91, 225) {
+		label at (0, -1)
+		inPin connection_138
+		sequenceCall {
+			inPin connection_137
+		}
+	}
+	literal unit resources.m "0.0" at (21, 223) size (49, 0) {
+		outPin {
+			connection_138
 		}
 	}
 }

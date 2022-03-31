@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 494947183
+		         /* programm id */ 746605802
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -84,6 +84,382 @@
 		    ALIGNMENT_FLOAT32_IEEE 4
 		    ALIGNMENT_FLOAT64_IEEE 8 
 		/end MOD_COMMON
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.x
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 4
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.y
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 5
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.bearing
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.myCar.myVehicle.MyTurn_instance.D
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 0
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.dpi
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 2
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.pi
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 5 1000 0 1000 0 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.myCar.myVehicle.BrakeMomentum
+			/* long identifier    */ ""
+			/* type               */ CURVE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_CURVE_R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ NO_INPUT_QUANTITY
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 2
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.myVehicle.EngineMomentum
+			/* long identifier    */ ""
+			/* type               */ MAP
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_MAP_R32R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ NO_INPUT_QUANTITY
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ myCar.myCar.myVehicle.v
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 3
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.myVehicle.AirFriction
+			/* long identifier    */ ""
+			/* type               */ CURVE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_CURVE_R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ myCar.myCar.myVehicle.v
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 1
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.myVehicle.Landscape
+			/* long identifier    */ ""
+			/* type               */ CURVE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_CURVE_R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ myCar.myCar.myVehicle.dist
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 128
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 4
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.h
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 10
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.dh
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 7
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.ds
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 9
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.momentum
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 11
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.dist
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 8
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.myCar.myVehicle.TrackSize
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 5
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.v
+			/* long identifier    */ ""
+			/* datatype           */ UWORD
+			/* conversion         */ esdl_f0_01_kmh
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0.0
+			/* upper limit        */ 200.0
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 12
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.x
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 13
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.y
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 14
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myVehicle.bearing
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 6
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.v
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 4
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.time
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.myCar.g
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 2
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.delta
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 1
+			/end IF_DATA
+		/end CHARACTERISTIC
 
 		/begin MEASUREMENT resources.CarMessages.v
 			/* long identifier    */ ""
@@ -183,382 +559,6 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.x
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 4
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.y
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 5
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.bearing
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 1
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin CHARACTERISTIC myCar.myCar.myVehicle.MyTurn_instance.D
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.dpi
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 2
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.MyTurn_instance.pi
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 3
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin CHARACTERISTIC myCar.myCar.myVehicle.BrakeMomentum
-			/* long identifier    */ ""
-			/* type               */ CURVE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_CURVE_R32R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin AXIS_DESCR
-				/* axis type          */ STD_AXIS
-				/* input quantity     */ NO_INPUT_QUANTITY
-				/* conversion         */ esdl_ident
-				/* max axis point     */ 6
-				/* lower limit        */ -3.4028234663852886E+38
-				/* upper limit        */ 3.4028234663852886E+38
-			/end AXIS_DESCR
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 2
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin CHARACTERISTIC myCar.myCar.myVehicle.EngineMomentum
-			/* long identifier    */ ""
-			/* type               */ MAP
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_MAP_R32R32R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin AXIS_DESCR
-				/* axis type          */ STD_AXIS
-				/* input quantity     */ NO_INPUT_QUANTITY
-				/* conversion         */ esdl_ident
-				/* max axis point     */ 6
-				/* lower limit        */ -3.4028234663852886E+38
-				/* upper limit        */ 3.4028234663852886E+38
-			/end AXIS_DESCR
-			/begin AXIS_DESCR
-				/* axis type          */ STD_AXIS
-				/* input quantity     */ myCar.myCar.myVehicle.v
-				/* conversion         */ esdl_ident
-				/* max axis point     */ 6
-				/* lower limit        */ -3.4028234663852886E+38
-				/* upper limit        */ 3.4028234663852886E+38
-			/end AXIS_DESCR
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 3
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin CHARACTERISTIC myCar.myCar.myVehicle.AirFriction
-			/* long identifier    */ ""
-			/* type               */ CURVE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_CURVE_R32R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin AXIS_DESCR
-				/* axis type          */ STD_AXIS
-				/* input quantity     */ myCar.myCar.myVehicle.v
-				/* conversion         */ esdl_ident
-				/* max axis point     */ 6
-				/* lower limit        */ -3.4028234663852886E+38
-				/* upper limit        */ 3.4028234663852886E+38
-			/end AXIS_DESCR
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 1
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin CHARACTERISTIC myCar.myCar.myVehicle.Landscape
-			/* long identifier    */ ""
-			/* type               */ CURVE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_CURVE_R32R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin AXIS_DESCR
-				/* axis type          */ STD_AXIS
-				/* input quantity     */ myCar.myCar.myVehicle.dist
-				/* conversion         */ esdl_ident
-				/* max axis point     */ 128
-				/* lower limit        */ -3.4028234663852886E+38
-				/* upper limit        */ 3.4028234663852886E+38
-			/end AXIS_DESCR
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 4
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.h
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 10
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.dh
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 7
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.ds
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 9
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.momentum
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 11
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.dist
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 8
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin CHARACTERISTIC myCar.myCar.myVehicle.TrackSize
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 5
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.v
-			/* long identifier    */ ""
-			/* datatype           */ UWORD
-			/* conversion         */ esdl_f0_01_kmh
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ 0.0
-			/* upper limit        */ 200.0
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 12
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.x
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 13
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.y
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 14
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.myVehicle.bearing
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 6
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.v
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 4
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myCar.time
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 3
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin CHARACTERISTIC myCar.myCar.g
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 2
-			/end IF_DATA
-		/end CHARACTERISTIC
-
-		/begin CHARACTERISTIC myCar.myCar.delta
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
-			/end IF_DATA
-		/end CHARACTERISTIC
-
 		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance.red
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
@@ -570,7 +570,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 0 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -585,7 +585,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 0 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -600,7 +600,22 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 0 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance.isVisible
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -614,7 +629,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 0 1000 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -628,7 +643,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 0 1000 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -643,7 +658,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 1 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 1 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -658,7 +673,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 1 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 1 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -673,7 +688,22 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 1 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 1 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance_2.isVisible
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 1 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -687,7 +717,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 1 1000 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 1 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -701,7 +731,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 1 1000 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 1 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -716,7 +746,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 2 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -731,7 +761,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 2 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -746,7 +776,22 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 2 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance_3.isVisible
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -760,7 +805,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 2 1000 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -774,21 +819,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1001 2 1000 1
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT environment.TrafficLightController.carElapsed
-			/* long identifier    */ ""
-			/* datatype           */ FLOAT32_IEEE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -818,7 +849,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -849,6 +880,20 @@
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT resources.TrafficLightMessages.visibleProximity
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1001 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -939,6 +984,145 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
+		/begin MEASUREMENT driver.driver.DrivingSM_instance.sm
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_driver_DrivingSMStatemachineStates
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT driver.driver.DrivingSM_instance.proximity
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 2
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT driver.driver.DrivingSM_instance.green
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT driver.driver.DrivingSM_instance.cruising
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT driver.driver.EdgeFalling_instance.buffer
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 1 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT driver.driver.EdgeFalling_instance.oldSignal
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 1 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC driver.driver.InverseBrakeMomentum
+			/* long identifier    */ ""
+			/* type               */ CURVE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_CURVE_R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ NO_INPUT_QUANTITY
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 2
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT driver.driver.requiredBrakeMomentum
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin COMPU_METHOD esdl_driver_DrivingSMStatemachineStates
+			/* long identifier    */ ""
+			/* type               */ TAB_VERB
+			/* format             */ "%12.4"
+			/* unit               */ ""
+			/* compu_tab_ref      */ COMPU_TAB_REF esdl_driver_DrivingSMStatemachineStates_vtab
+		/end COMPU_METHOD
+		/begin COMPU_VTAB esdl_driver_DrivingSMStatemachineStates_vtab
+			/* long identifier    */ ""
+			/* type               */ TAB_VERB
+			/* number value pairs */ 2 
+			/* value pair         */ 0 "ACCState"
+			/* value pair         */ 1 "BrakeState"
+			/* default value      */ DEFAULT_VALUE "Error"
+		/end COMPU_VTAB 
 		/begin COMPU_METHOD esdl_environment_TrafficLightSMStatemachineStates
 			/* long identifier    */ ""
 			/* type               */ TAB_VERB
@@ -987,13 +1171,6 @@
 
 		/begin FUNCTION myCar.TimeBase
 			""
-		/end FUNCTION
-		/begin FUNCTION driver.driver
-			""
-			/begin OUT_MEASUREMENT
-				resources.CarMessages.brake
-				resources.CarMessages.power
-			/end OUT_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION myCar.myCar
 			""
@@ -1073,10 +1250,8 @@
 			/end IN_MEASUREMENT
 			/begin OUT_MEASUREMENT
 				resources.TrafficLightMessages.flashed
+				resources.TrafficLightMessages.visibleProximity
 			/end OUT_MEASUREMENT
-			/begin LOC_MEASUREMENT
-				environment.TrafficLightController.carElapsed
-			/end LOC_MEASUREMENT
 			/begin SUB_FUNCTION
 				environment.TrafficLightController.TrafficLight_instance
 				environment.TrafficLightController.TrafficLight_instance_2
@@ -1087,6 +1262,7 @@
 			""
 			/begin LOC_MEASUREMENT
 				environment.TrafficLightController.TrafficLight_instance.green
+				environment.TrafficLightController.TrafficLight_instance.isVisible
 				environment.TrafficLightController.TrafficLight_instance.position
 				environment.TrafficLightController.TrafficLight_instance.proximity
 				environment.TrafficLightController.TrafficLight_instance.red
@@ -1097,6 +1273,7 @@
 			""
 			/begin LOC_MEASUREMENT
 				environment.TrafficLightController.TrafficLight_instance_2.green
+				environment.TrafficLightController.TrafficLight_instance_2.isVisible
 				environment.TrafficLightController.TrafficLight_instance_2.position
 				environment.TrafficLightController.TrafficLight_instance_2.proximity
 				environment.TrafficLightController.TrafficLight_instance_2.red
@@ -1107,6 +1284,7 @@
 			""
 			/begin LOC_MEASUREMENT
 				environment.TrafficLightController.TrafficLight_instance_3.green
+				environment.TrafficLightController.TrafficLight_instance_3.isVisible
 				environment.TrafficLightController.TrafficLight_instance_3.position
 				environment.TrafficLightController.TrafficLight_instance_3.proximity
 				environment.TrafficLightController.TrafficLight_instance_3.red
@@ -1139,9 +1317,45 @@
 		/end FUNCTION
 		/begin FUNCTION environment.FlashLight
 			""
+		/end FUNCTION
+		/begin FUNCTION driver.driver
+			""
+			/begin DEF_CHARACTERISTIC
+				driver.driver.InverseBrakeMomentum
+			/end DEF_CHARACTERISTIC
 			/begin IN_MEASUREMENT
-				resources.TrafficLightMessages.red
+				resources.CarMessages.v
+				resources.TrafficLightMessages.green
+				resources.TrafficLightMessages.visibleProximity
 			/end IN_MEASUREMENT
+			/begin OUT_MEASUREMENT
+				resources.CarMessages.brake
+				resources.CarMessages.power
+				resources.CarMessages.x
+			/end OUT_MEASUREMENT
+			/begin LOC_MEASUREMENT
+				driver.driver.requiredBrakeMomentum
+			/end LOC_MEASUREMENT
+			/begin SUB_FUNCTION
+				driver.driver.DrivingSM_instance
+				driver.driver.EdgeFalling_instance
+			/end SUB_FUNCTION
+		/end FUNCTION
+		/begin FUNCTION driver.driver.DrivingSM_instance
+			""
+			/begin LOC_MEASUREMENT
+				driver.driver.DrivingSM_instance.cruising
+				driver.driver.DrivingSM_instance.green
+				driver.driver.DrivingSM_instance.proximity
+				driver.driver.DrivingSM_instance.sm
+			/end LOC_MEASUREMENT
+		/end FUNCTION
+		/begin FUNCTION driver.driver.EdgeFalling_instance
+			"EdgeFalling detects a falling edge of the logical input signal."
+			/begin LOC_MEASUREMENT
+				driver.driver.EdgeFalling_instance.buffer
+				driver.driver.EdgeFalling_instance.oldSignal
+			/end LOC_MEASUREMENT
 		/end FUNCTION
 
 		/begin RECORD_LAYOUT STANDARD_CURVE_R32R32
@@ -1163,6 +1377,32 @@
 		/begin GROUP driver.driver
 			""
 			ROOT
+			/begin REF_CHARACTERISTIC
+				driver.driver.InverseBrakeMomentum
+			/end REF_CHARACTERISTIC
+			/begin REF_MEASUREMENT
+				driver.driver.requiredBrakeMomentum
+			/end REF_MEASUREMENT
+			/begin SUB_GROUP
+				driver.driver.DrivingSM_instance
+				driver.driver.EdgeFalling_instance
+			/end SUB_GROUP
+		/end GROUP
+		/begin GROUP driver.driver.DrivingSM_instance
+			""
+			/begin REF_MEASUREMENT
+				driver.driver.DrivingSM_instance.cruising
+				driver.driver.DrivingSM_instance.green
+				driver.driver.DrivingSM_instance.proximity
+				driver.driver.DrivingSM_instance.sm
+			/end REF_MEASUREMENT
+		/end GROUP
+		/begin GROUP driver.driver.EdgeFalling_instance
+			"EdgeFalling detects a falling edge of the logical input signal."
+			/begin REF_MEASUREMENT
+				driver.driver.EdgeFalling_instance.buffer
+				driver.driver.EdgeFalling_instance.oldSignal
+			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP environment.FlashLight
 			""
@@ -1191,9 +1431,6 @@
 		/begin GROUP environment.TrafficLightController
 			""
 			ROOT
-			/begin REF_MEASUREMENT
-				environment.TrafficLightController.carElapsed
-			/end REF_MEASUREMENT
 			/begin SUB_GROUP
 				environment.TrafficLightController.TrafficLight_instance
 				environment.TrafficLightController.TrafficLight_instance_2
@@ -1204,6 +1441,7 @@
 			""
 			/begin REF_MEASUREMENT
 				environment.TrafficLightController.TrafficLight_instance.green
+				environment.TrafficLightController.TrafficLight_instance.isVisible
 				environment.TrafficLightController.TrafficLight_instance.position
 				environment.TrafficLightController.TrafficLight_instance.proximity
 				environment.TrafficLightController.TrafficLight_instance.red
@@ -1214,6 +1452,7 @@
 			""
 			/begin REF_MEASUREMENT
 				environment.TrafficLightController.TrafficLight_instance_2.green
+				environment.TrafficLightController.TrafficLight_instance_2.isVisible
 				environment.TrafficLightController.TrafficLight_instance_2.position
 				environment.TrafficLightController.TrafficLight_instance_2.proximity
 				environment.TrafficLightController.TrafficLight_instance_2.red
@@ -1224,6 +1463,7 @@
 			""
 			/begin REF_MEASUREMENT
 				environment.TrafficLightController.TrafficLight_instance_3.green
+				environment.TrafficLightController.TrafficLight_instance_3.isVisible
 				environment.TrafficLightController.TrafficLight_instance_3.position
 				environment.TrafficLightController.TrafficLight_instance_3.proximity
 				environment.TrafficLightController.TrafficLight_instance_3.red
@@ -1312,6 +1552,7 @@
 				resources.TrafficLightMessages.flashed
 				resources.TrafficLightMessages.green
 				resources.TrafficLightMessages.red
+				resources.TrafficLightMessages.visibleProximity
 				resources.TrafficLightMessages.yellow
 			/end REF_MEASUREMENT
 		/end GROUP

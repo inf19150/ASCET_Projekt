@@ -1,6 +1,7 @@
 package resources;
 
 type curve_real is table real -> real;
+type curve_a_real is table a -> real;
 type curve_real_a is table real -> a;
 type curve_m is table m -> m;
 type curve_s is table s -> real;

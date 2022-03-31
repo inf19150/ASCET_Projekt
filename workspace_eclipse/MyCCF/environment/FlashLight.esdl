@@ -1,10 +1,7 @@
 package environment;
 import resources.m;
 
-import resources.TrafficLightMessages;
-
-static class FlashLight
-reads TrafficLightMessages.red {
+static class FlashLight {
 	const m upperLimit = 0.0[m];
 	const m lowerLimit = -2.0[m];
 

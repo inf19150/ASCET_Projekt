@@ -1,10 +1,10 @@
 application {
 	class myCar.TimeBase
-	class driver.driver
 	class myCar.myCar
 	class environment.TrafficLightController
 	class environment.Light
 	class environment.FlashLight
+	class driver.driver
 }
 schedule {
 	startup {
