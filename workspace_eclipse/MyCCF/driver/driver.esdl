@@ -40,5 +40,4 @@ reads CarMessages.v, TrafficLightMessages.visibleProximity, TrafficLightMessages
 			CarMessages.brake = requiredBrakeMomentum; // calc_spec/calc 6/if-else 2
 		} // calc_spec/calc 6
 	}
-	
 }
