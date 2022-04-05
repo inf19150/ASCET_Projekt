@@ -3,6 +3,7 @@
 	<name>MyCCF</name>
 	<comment></comment>
 	<projects>
+		<project>AssertionLibrary</project>
 		<project>SystemLib</project>
 	</projects>
 	<buildSpec>
