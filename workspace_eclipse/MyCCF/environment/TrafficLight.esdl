@@ -9,15 +9,6 @@ class TrafficLight {
 	m proximity = 0.0[m];
 	m position = 0.0[m];
 
-	//public initializer initLight() {
-	//	red = false;
-	//	yellow = true;
-	//	green = false;
-	//	isVisible = false;
-	//	position = 0.0[m];
-	//	proximity = 0.0[m];
-	//}
-
 	public void setPosition(m pos) {
 		this.position = pos;
 		this.proximity = pos;
