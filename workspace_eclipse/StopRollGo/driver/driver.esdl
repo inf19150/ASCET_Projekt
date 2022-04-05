@@ -14,18 +14,18 @@ reads CarMessages.v, TrafficLightMessages.visibleProximity, TrafficLightMessages
 	const kmh targetVelocity = 50.0[kmh];
 	DrivingSM DrivingSM_instance;
 	characteristic curve_a_real InverseBrakeMomentum[5] = {{-4.0[a], -3.0[a], -2.0[a], -1.0[a], 0.0[a]}, {100.0, 80.0, 60.0, 40.0, 0.0}};
-	real requiredBrakeMomentum = 0.0;
+	real requiredBrake = 0.0;
 	EdgeFalling EdgeFalling_instance;
 
 	@thread
-	@generated("blockdiagram", "4f0ff70b")
+	@generated("blockdiagram", "3d508261")
 	public void calc() {
 		DrivingSM_instance.proximity = TrafficLightMessages.visibleProximity; // calc_spec/calc 1
 		DrivingSM_instance.green = TrafficLightMessages.green; // calc_spec/calc 2
 		DrivingSM_instance.drivingSMStatemachineTrigger(); // calc_spec/calc 3
 		EdgeFalling_instance.compute(DrivingSM_instance.cruising); // calc_spec/calc 4
 		if (EdgeFalling_instance.value()) {
-			requiredBrakeMomentum = InverseBrakeMomentum.getAt((((1.0[ms] * (CarMessages.v / 3.6[kmh])) * (1.0[ms] * (CarMessages.v / 3.6[kmh]))) / ((TrafficLightMessages.visibleProximity + 8.0[m]) * -2.0))); // calc_spec/calc 5/if-then 1
+			requiredBrake = InverseBrakeMomentum.getAt((((1.0[ms] * (CarMessages.v / 3.6[kmh])) * (1.0[ms] * (CarMessages.v / 3.6[kmh]))) / ((TrafficLightMessages.visibleProximity + 8.0[m]) * -2.0))); // calc_spec/calc 5/if-then 1
 		} // calc_spec/calc 5
 		if (DrivingSM_instance.cruising) {
 			if (CarMessages.v >= targetVelocity) {
@@ -37,7 +37,7 @@ reads CarMessages.v, TrafficLightMessages.visibleProximity, TrafficLightMessages
 			} // calc_spec/calc 6/if-then 1
 		} else {
 			CarMessages.power = 0.0; // calc_spec/calc 6/if-else 1
-			CarMessages.brake = requiredBrakeMomentum; // calc_spec/calc 6/if-else 2
+			CarMessages.brake = requiredBrake; // calc_spec/calc 6/if-else 2
 		} // calc_spec/calc 6
 	}
 }

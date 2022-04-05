@@ -284,7 +284,7 @@ blockdiagramSpecification calc_spec {
 			connection_70
 		}
 	}
-	simpleIdentifier requiredBrakeMomentum at (651, 555) {
+	simpleIdentifier requiredBrake at (651, 555) {
 		label at (0, -1)
 		inPin connection_75
 		outPin sequenceCall {
@@ -323,7 +323,7 @@ blockdiagramSpecification calc_spec {
 			}
 		}
 	}
-	simpleIdentifier requiredBrakeMomentum at (521, 345) {
+	simpleIdentifier requiredBrake at (521, 345) {
 		label at (-50, -1)
 		inPin outPin {
 			connection_83

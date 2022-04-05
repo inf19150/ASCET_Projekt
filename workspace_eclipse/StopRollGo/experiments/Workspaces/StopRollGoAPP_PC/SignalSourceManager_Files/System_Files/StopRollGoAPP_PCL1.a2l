@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 1375749444
+		         /* programm id */ 1375751105
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -1108,7 +1108,7 @@
 			/end IF_DATA
 		/end CHARACTERISTIC
 
-		/begin MEASUREMENT driver.driver.requiredBrakeMomentum
+		/begin MEASUREMENT driver.driver.requiredBrake
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
@@ -1348,7 +1348,7 @@
 				resources.CarMessages.power
 			/end OUT_MEASUREMENT
 			/begin LOC_MEASUREMENT
-				driver.driver.requiredBrakeMomentum
+				driver.driver.requiredBrake
 			/end LOC_MEASUREMENT
 			/begin SUB_FUNCTION
 				driver.driver.DrivingSM_instance
@@ -1395,7 +1395,7 @@
 				driver.driver.InverseBrakeMomentum
 			/end REF_CHARACTERISTIC
 			/begin REF_MEASUREMENT
-				driver.driver.requiredBrakeMomentum
+				driver.driver.requiredBrake
 			/end REF_MEASUREMENT
 			/begin SUB_GROUP
 				driver.driver.DrivingSM_instance
