@@ -10,7 +10,7 @@ blockdiagramSpecification Main {
 			connection_2, connection_4, connection_6
 		}
 	}
-	complexIdentifier TrafficLight_instance at (521, 51) size (14, 13) {
+	complexIdentifier TrafficLight_instance_1 at (521, 51) size (14, 13) {
 		label at (50, -159)
 		methodCall environment.TrafficLight.setPosition {
 			argumentPin pos at (left, 0) connection_3

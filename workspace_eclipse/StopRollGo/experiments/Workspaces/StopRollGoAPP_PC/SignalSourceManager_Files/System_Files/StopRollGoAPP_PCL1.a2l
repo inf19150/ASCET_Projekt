@@ -573,7 +573,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance.red
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance_1.red
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
@@ -588,7 +588,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance.yellow
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance_1.yellow
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
@@ -603,7 +603,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance.green
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance_1.green
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
@@ -618,7 +618,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance.isVisible
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance_1.isVisible
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
@@ -633,7 +633,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance.proximity
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance_1.proximity
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
@@ -647,7 +647,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance.position
+		/begin MEASUREMENT environment.TrafficLightController.TrafficLight_instance_1.position
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
 			/* conversion         */ esdl_ident
@@ -1268,20 +1268,20 @@
 				resources.TrafficLightMessages.visibleProximity
 			/end OUT_MEASUREMENT
 			/begin SUB_FUNCTION
-				environment.TrafficLightController.TrafficLight_instance
+				environment.TrafficLightController.TrafficLight_instance_1
 				environment.TrafficLightController.TrafficLight_instance_2
 				environment.TrafficLightController.TrafficLight_instance_3
 			/end SUB_FUNCTION
 		/end FUNCTION
-		/begin FUNCTION environment.TrafficLightController.TrafficLight_instance
+		/begin FUNCTION environment.TrafficLightController.TrafficLight_instance_1
 			""
 			/begin LOC_MEASUREMENT
-				environment.TrafficLightController.TrafficLight_instance.green
-				environment.TrafficLightController.TrafficLight_instance.isVisible
-				environment.TrafficLightController.TrafficLight_instance.position
-				environment.TrafficLightController.TrafficLight_instance.proximity
-				environment.TrafficLightController.TrafficLight_instance.red
-				environment.TrafficLightController.TrafficLight_instance.yellow
+				environment.TrafficLightController.TrafficLight_instance_1.green
+				environment.TrafficLightController.TrafficLight_instance_1.isVisible
+				environment.TrafficLightController.TrafficLight_instance_1.position
+				environment.TrafficLightController.TrafficLight_instance_1.proximity
+				environment.TrafficLightController.TrafficLight_instance_1.red
+				environment.TrafficLightController.TrafficLight_instance_1.yellow
 			/end LOC_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION environment.TrafficLightController.TrafficLight_instance_2
@@ -1446,20 +1446,20 @@
 			""
 			ROOT
 			/begin SUB_GROUP
-				environment.TrafficLightController.TrafficLight_instance
+				environment.TrafficLightController.TrafficLight_instance_1
 				environment.TrafficLightController.TrafficLight_instance_2
 				environment.TrafficLightController.TrafficLight_instance_3
 			/end SUB_GROUP
 		/end GROUP
-		/begin GROUP environment.TrafficLightController.TrafficLight_instance
+		/begin GROUP environment.TrafficLightController.TrafficLight_instance_1
 			""
 			/begin REF_MEASUREMENT
-				environment.TrafficLightController.TrafficLight_instance.green
-				environment.TrafficLightController.TrafficLight_instance.isVisible
-				environment.TrafficLightController.TrafficLight_instance.position
-				environment.TrafficLightController.TrafficLight_instance.proximity
-				environment.TrafficLightController.TrafficLight_instance.red
-				environment.TrafficLightController.TrafficLight_instance.yellow
+				environment.TrafficLightController.TrafficLight_instance_1.green
+				environment.TrafficLightController.TrafficLight_instance_1.isVisible
+				environment.TrafficLightController.TrafficLight_instance_1.position
+				environment.TrafficLightController.TrafficLight_instance_1.proximity
+				environment.TrafficLightController.TrafficLight_instance_1.red
+				environment.TrafficLightController.TrafficLight_instance_1.yellow
 			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP environment.TrafficLightController.TrafficLight_instance_2
