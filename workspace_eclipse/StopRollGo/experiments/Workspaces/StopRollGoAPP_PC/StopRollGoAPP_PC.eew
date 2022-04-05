@@ -1,0 +1,22 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Workspace.xsd" xsi:type="ETAS.EE.Data.WorkspaceType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="IDfbc5d9e6-30ac-45c6-9283-951b80fa27c8" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID712a1342-fa61-4c50-90e9-52d13105796a" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID96d7c8cb-078e-4bc1-ad66-ab1cbdbdeafd" pluginID="SignalSourceManager" rootFolder="SignalSourceManager_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID441b6bca-de79-4432-a01d-9b7358e511f0" type="" name="SignalSourcesData" file="SignalSources.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID1fe1d723-ce21-4b8b-ba90-5e3e662fce41" path="C:\Users\Nick\Documents\GitHub\ASCET_Projekt\workspace_eclipse\StopRollGo\experiments\Experiments\system\StopRollGoAPP_PC\StopRollGoAPP_PC.eex" hintPath="..\..\Experiments\system\StopRollGoAPP_PC\StopRollGoAPP_PC.eex" />
+  </RecentExperiments>
+  <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID5e96e506-8b3c-414c-90c0-3536728f8172" Created="2022-04-05T10:50:51.888Z" LastOpened="2022-04-05T10:50:51.889Z" LastSaved="2022-04-05T10:59:34.971Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="ID0b8070a0-fee7-4e04-9a48-7f5b40084bc6" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
+  </WorkspaceInfo>
+</Workspace>

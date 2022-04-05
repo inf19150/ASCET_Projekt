@@ -1,0 +1,2 @@
+2565 = platform:/resource/StopRollGo/driver/DrivingSM.esdl#esdlLink_PackageDecl;;driver/ClassType;definitions.0;DrivingSM/StateMachineDecl;stateMachines.0;DrivingSMStatemachine/StateMachineState;states.0;ACCState/StatementBlock;staticAction;/SimpleAssign;statements.0;
+2302 = platform:/resource/StopRollGo/driver/DrivingSM.esdl#esdlLink_PackageDecl;;driver/ClassType;definitions.0;DrivingSM/StateMachineDecl;stateMachines.0;DrivingSMStatemachine/StateMachineState;states.1;BrakeState/StatementBlock;staticAction;/SimpleAssign;statements.0;

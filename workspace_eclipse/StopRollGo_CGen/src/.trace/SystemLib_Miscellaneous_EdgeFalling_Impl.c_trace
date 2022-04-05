@@ -1,0 +1,3 @@
+2874 = platform:/resource/SystemLib/SystemLib/Miscellaneous/EdgeFalling.esdl#esdlLink_PackageDecl;;SystemLib.Miscellaneous/ClassType;definitions.0;EdgeFalling/MethodDecl;parts.3;value/StatementBlock;block;/ReturnStatement;statements.0;
+2028 = platform:/resource/SystemLib/SystemLib/Miscellaneous/EdgeFalling.esdl#esdlLink_PackageDecl;;SystemLib.Miscellaneous/ClassType;definitions.0;EdgeFalling/MethodDecl;parts.2;compute/StatementBlock;block;/SimpleAssign;statements.1;
+1981 = platform:/resource/SystemLib/SystemLib/Miscellaneous/EdgeFalling.esdl#esdlLink_PackageDecl;;SystemLib.Miscellaneous/ClassType;definitions.0;EdgeFalling/MethodDecl;parts.2;compute/StatementBlock;block;/SimpleAssign;statements.0;

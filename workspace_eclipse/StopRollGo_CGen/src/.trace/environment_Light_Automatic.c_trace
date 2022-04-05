@@ -1,0 +1,8 @@
+6192 = platform:/resource/StopRollGo/environment/Light.esdl#esdlLink_PackageDecl;;environment/ClassType;definitions.0;Light/MethodDecl;parts.2;calc/StatementBlock;block;/SimpleAssign;statements.6;
+5617 = platform:/resource/StopRollGo/environment/Light.esdl#esdlLink_PackageDecl;;environment/ClassType;definitions.0;Light/MethodDecl;parts.2;calc/StatementBlock;block;/SimpleAssign;statements.0;
+5665 = platform:/resource/StopRollGo/environment/Light.esdl#esdlLink_PackageDecl;;environment/ClassType;definitions.0;Light/MethodDecl;parts.2;calc/StatementBlock;block;/CompositeIdentifierAccess;statements.1;
+5763 = platform:/resource/StopRollGo/environment/Light.esdl#esdlLink_PackageDecl;;environment/ClassType;definitions.0;Light/MethodDecl;parts.2;calc/StatementBlock;block;/SimpleAssign;statements.2;
+5844 = platform:/resource/StopRollGo/environment/Light.esdl#esdlLink_PackageDecl;;environment/ClassType;definitions.0;Light/MethodDecl;parts.2;calc/StatementBlock;block;/IfStatement;statements.3;
+5884 = platform:/resource/StopRollGo/environment/Light.esdl#esdlLink_PackageDecl;;environment/ClassType;definitions.0;Light/MethodDecl;parts.2;calc/StatementBlock;block;/IfStatement;statements.3;/StatementBlock;ifBlock;/SimpleAssign;statements.0;
+6060 = platform:/resource/StopRollGo/environment/Light.esdl#esdlLink_PackageDecl;;environment/ClassType;definitions.0;Light/MethodDecl;parts.2;calc/StatementBlock;block;/SimpleAssign;statements.5;
+5934 = platform:/resource/StopRollGo/environment/Light.esdl#esdlLink_PackageDecl;;environment/ClassType;definitions.0;Light/MethodDecl;parts.2;calc/StatementBlock;block;/SimpleAssign;statements.4;
