@@ -1,5 +1,6 @@
 package resources;
 
+// All necessary TrafficLight information
 data interface TrafficLightMessages {
 	boolean red = false;
 	boolean yellow = false;

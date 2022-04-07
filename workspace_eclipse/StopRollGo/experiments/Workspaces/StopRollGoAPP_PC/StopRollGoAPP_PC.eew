@@ -13,10 +13,10 @@
     </Item>
   </PluginData>
   <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
-    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID734170b5-21c7-487d-9df6-fdeb5327547b" path="C:\Users\Nick\Documents\GitHub\ASCET_Projekt\workspace_eclipse\StopRollGo\experiments\Experiments\system\StopRollGoAPP_PC\StopRollGoAPP_PC.eex" hintPath="..\..\Experiments\system\StopRollGoAPP_PC\StopRollGoAPP_PC.eex" />
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID1de7a8c2-ea3b-4f55-b448-944514bbb6d8" path="C:\Users\harte\Dokumente\git\ASCET_Projekt\workspace_eclipse\StopRollGo\experiments\Experiments\system\StopRollGoAPP_PC\StopRollGoAPP_PC.eex" hintPath="..\..\Experiments\system\StopRollGoAPP_PC\StopRollGoAPP_PC.eex" />
   </RecentExperiments>
   <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
-    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID5e96e506-8b3c-414c-90c0-3536728f8172" Created="2022-04-05T10:50:51.888Z" LastOpened="2022-04-05T14:37:23.624Z" LastSaved="2022-04-05T14:39:07.123Z" />
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID5e96e506-8b3c-414c-90c0-3536728f8172" Created="2022-04-05T10:50:51.888Z" LastOpened="2022-04-07T15:03:32.787Z" LastSaved="2022-04-07T15:06:03.183Z" />
     <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="ID0b8070a0-fee7-4e04-9a48-7f5b40084bc6" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
   </WorkspaceInfo>
 </Workspace>
