@@ -7,6 +7,7 @@ import resources.m;
 import resources.curve_a_real;
 import resources.ms;
 import SystemLib.Miscellaneous.EdgeFalling;
+import resources.s;
 
 static class driver
 writes CarMessages.power, CarMessages.brake
@@ -18,7 +19,7 @@ reads CarMessages.v, TrafficLightMessages.visibleProximity, TrafficLightMessages
 	EdgeFalling EdgeFalling_instance;
 
 	@thread
-	@generated("blockdiagram", "3d508261")
+	@generated("blockdiagram", "5bfe8bbf")
 	public void calc() {
 		DrivingSM_instance.proximity = TrafficLightMessages.visibleProximity; // calc_spec/calc 1
 		DrivingSM_instance.green = TrafficLightMessages.green; // calc_spec/calc 2

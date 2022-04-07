@@ -37,6 +37,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	ifElse at (841, 111) {
+		comment at (10, -80) {
+			"ACC\r\n"
+		}
 		inPin connection_6 {
 			bendpoints (0, -30)
 		}
@@ -122,6 +125,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	ifElse at (451, 91) {
+		comment at (-50, -80) {
+			"Either cruise with ACC or Break accordingly\r\n"
+		}
 		inPin connection_53 {
 			bendpoints (30, 0), (30, 20)
 		}
@@ -159,6 +165,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	complexIdentifier DrivingSM_instance at (201, 71) size (14, 8) {
+		comment at (0, 21) size (150, 51) {
+			"Get cruising mode from SM, see documentation for further information\r\n"
+		}
 		label at (0, 1)
 		methodCall driver.DrivingSM.drivingSMStatemachineTrigger {
 			methodVoidPin at (top, 0) sequenceCall at (-4, -30) {
@@ -187,6 +196,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	simpleIdentifier InverseBrakeMomentum at (521, 541) {
+		comment at (-30, 21) {
+			"Map a to requried brake\r\n"
+		}
 		label at (-50, 1)
 		inPin connection_71
 		outPin {
@@ -250,6 +262,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	division at (131, 486) {
+		comment at (-50, -84) {
+			"Convert to SI base Unit\r\nkm/h to m/s"
+		}
 		inPin connection_62
 		inPin connection_63
 		outPin {
@@ -269,6 +284,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	multiplication at (311, 476) {
+		comment at (0, -44) {
+			"square\r\n"
+		}
 		inPin connection_66 {
 			bendpoints (20, 0)
 		}
@@ -280,6 +298,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	literal unit resources.ms "1.0" at (181, 473) size (49, 0) {
+		comment at (30, -36) {
+			"Add unit"
+		}
 		outPin {
 			connection_70
 		}
@@ -294,6 +315,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	if at (531, 491) {
+		comment at (30, -80) size (160, 31) {
+			"Execute once when entering not cruising mode\r\n\r\n\r\n"
+		}
 		inPin connection_79 {
 			bendpoints (90, 0)
 		}

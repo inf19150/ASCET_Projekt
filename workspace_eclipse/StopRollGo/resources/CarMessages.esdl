@@ -7,6 +7,7 @@ data interface CarMessages {
 	real brake = 0.0;
 	real steering = 0.0;
 	real bearing = 0.0;
+	// Use the dist of the car in the lap, because it resets itself
 	@a2l_unit_label("m")
 	m dist = 0.0[m];
 	@a2l_unit_label("m")

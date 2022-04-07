@@ -63,6 +63,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	or at (491, 176) size (2, 5) {
+		comment at (-30, 6) {
+			"If the car passed at least one traffic light\r\n"
+		}
 		inPin connection_32 {
 			bendpoints (120, 0), (120, 80)
 		}
@@ -75,6 +78,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	return at (671, 185) {
+		comment at (10, 16) {
+			"return boolean flashed\r\n"
+		}
 		label at (0, 0)
 		inPin connection_63
 		sequenceCall {
@@ -136,6 +142,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	and at (601, 176) {
+		comment at (-20, -74) {
+			"And the traffic light is red\r\n"
+		}
 		inPin connection_64 {
 			bendpoints (50, 0), (50, 30)
 		}

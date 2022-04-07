@@ -9,7 +9,7 @@ writes TrafficLightMessages.red, TrafficLightMessages.yellow, TrafficLightMessag
 	LightSM TrafficLightSM_instance;
 
 	@thread
-	@generated("blockdiagram", "3c8c66cd")
+	@generated("blockdiagram", "b377bf96")
 	public void calc() {
 		elapsedTime = (TimeBase.deltaT + elapsedTime); // Main/calc 1
 		TrafficLightSM_instance.trafficLightSMStatemachineTrigger(); // Main/calc 2
