@@ -9,29 +9,29 @@ static class UnitTest_Light {
 	public void testTimer() {
 		Assert.assertNear(elapsedTime / 1.0[s], 0.0, 0.001);
 
-		calc(5.0[s]);
+		testCalc(5.0[s]);
 		Assert.assertNear(elapsedTime / 1.0[s], 5.0, 0.001);
 
-		calc(30.0[s]);
+		testCalc(30.0[s]);
 		Assert.assertNear(elapsedTime / 1.0[s], 35.0, 0.001);
 
-		calc(20.0[s]);
+		testCalc(20.0[s]);
 		Assert.assertNear(elapsedTime / 1.0[s], 55.0, 0.001);
 
-		calc(4.0[s]);
+		testCalc(4.0[s]);
 		Assert.assertNear(elapsedTime / 1.0[s], 59.0, 0.001);
 
-		calc(1.0[s]);
+		testCalc(1.0[s]);
 		Assert.assertNear(elapsedTime / 1.0[s], 0.0, 0.001);
 
-		calc(60.0[s]);
+		testCalc(60.0[s]);
 		Assert.assertNear(elapsedTime / 1.0[s], 0.0, 0.001);
 
-		calc(45.0[s]);
+		testCalc(45.0[s]);
 		Assert.assertNear(elapsedTime / 1.0[s], 45.0, 0.001);
 	}
 
-	public void calc(s deltaT) {
+	public void testCalc(s deltaT) {
 		elapsedTime = (deltaT + elapsedTime);
 		if (elapsedTime >= 60.0[s]) {
 			elapsedTime = 0.0[s];

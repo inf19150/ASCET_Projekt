@@ -19,7 +19,7 @@ reads CarMessages.v, TrafficLightMessages.visibleProximity, TrafficLightMessages
 	EdgeFalling EdgeFalling_instance;
 
 	@thread
-	@generated("blockdiagram", "5bfe8bbf")
+	@generated("blockdiagram", "2fcc3cec")
 	public void calc() {
 		DrivingSM_instance.proximity = TrafficLightMessages.visibleProximity; // calc_spec/calc 1
 		DrivingSM_instance.green = TrafficLightMessages.green; // calc_spec/calc 2

@@ -231,6 +231,9 @@ blockdiagramSpecification Main {
 		}
 	}
 	complexIdentifier environment.FlashLight at (1061, 51) size (17, 76) {
+		comment at (0, 21) {
+			"Gets all proximities and the red LED state, returns if the car was flashed"
+		}
 		label at (0, 1)
 		methodCall environment.FlashLight.calc {
 			argumentPin proximity1 at (left, 0) connection_64

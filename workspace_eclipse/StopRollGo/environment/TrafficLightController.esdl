@@ -11,7 +11,7 @@ writes TrafficLightMessages.flashed, TrafficLightMessages.visibleProximity {
 	private TrafficLight TrafficLight_instance_3;
 
 	@thread
-	@generated("blockdiagram", "cf3ddc84")
+	@generated("blockdiagram", "162787b7")
 	public void init() {
 		TrafficLight_instance_1.setPosition(300.0[m]); // Main/init 1
 		TrafficLight_instance_2.setPosition(500.0[m]); // Main/init 2
@@ -19,7 +19,7 @@ writes TrafficLightMessages.flashed, TrafficLightMessages.visibleProximity {
 	}
 
 	@thread
-	@generated("blockdiagram", "9b8633b2")
+	@generated("blockdiagram", "58717ac9")
 	public void calc() {
 		TrafficLight_instance_1.setRed(TrafficLightMessages.red); // Main/calc 1
 		TrafficLight_instance_2.setRed(TrafficLightMessages.red); // Main/calc 2

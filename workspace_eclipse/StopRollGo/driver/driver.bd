@@ -209,6 +209,9 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	simpleIdentifier resources.TrafficLightMessages.visibleProximity at (71, 545) {
+		comment at (-40, 25) {
+			"Braking distance\r\n"
+		}
 		label at (-30, -31)
 		outPin {
 			connection_56
@@ -310,17 +313,15 @@ blockdiagramSpecification calc_spec {
 		inPin connection_75
 		outPin sequenceCall {
 			inPin connection_74 {
-				bendpoints (50, 0), (50, 40)
+				bendpoints (50, 0), (50, 120)
 			}
 		}
 	}
-	if at (531, 491) {
-		comment at (30, -80) size (160, 31) {
+	if at (531, 411) {
+		comment at (-60, 0) size (160, 31) {
 			"Execute once when entering not cruising mode\r\n\r\n\r\n"
 		}
-		inPin connection_79 {
-			bendpoints (90, 0)
-		}
+		inPin connection_79
 		ifControlFlowOutPin {
 			connection_74
 		}
@@ -329,7 +330,7 @@ blockdiagramSpecification calc_spec {
 		}
 	}
 	complexIdentifier EdgeFalling_instance at (401, 401) size (3, 3) backgroundColor #ffffff {
-		label at (-60, 1)
+		label at (-110, 1)
 		methodCall SystemLib.Miscellaneous.EdgeFalling.compute {
 			argumentPin signal at (left, 1) connection_85 {
 				bendpoints (30, 0), (30, 340)
